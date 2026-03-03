@@ -1,0 +1,46 @@
+:root {
+    --main-color: #B44FF7;
+    --background-color: #1E1E1E;
+    --text-color: #E1E1E1;
+    --hover-color: #743697;
+}
+
+body.light {
+    --background-color: #E1E1E1;
+    --text-color: #1E1E1E;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 30px;
+    width: 70px;
+    border-width: 0px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:active {
+    background-color: var(--main-color);
+}
+
+.pretty-text {
+    display: inline-block;
+    background: linear-gradient(
+        130deg,
+        var(--main-color) 0%,
+        var(--text-color) 66%,
+        var(--text-color) 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
