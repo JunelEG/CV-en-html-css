@@ -1,9 +1,28 @@
+// ── Theme toggle ──
 const themeBtn = document.getElementById("themeBtn");
 
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("light");
 });
 
+// ── Hamburger menu ──
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mainNav = document.getElementById("mainNav");
+
+hamburgerBtn.addEventListener("click", () => {
+  hamburgerBtn.classList.toggle("open");
+  mainNav.classList.toggle("open");
+});
+
+// Cierra el menú al hacer click en un link
+mainNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburgerBtn.classList.remove("open");
+    mainNav.classList.remove("open");
+  });
+});
+
+// ── Contact form ──
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (e) {

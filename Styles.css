@@ -32,7 +32,6 @@ button {
 
 button:hover {
   color: rgb(225, 225, 225);
-  /*CONTRASTE! no lo borre */
   background-color: var(--hover-color);
 }
 
@@ -58,7 +57,7 @@ p {
 }
 
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 200px;
 }
 
 input,
@@ -72,6 +71,7 @@ textarea {
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input:focus,
@@ -81,32 +81,29 @@ textarea:focus {
 }
 
 .pretty-text {
-  /*ChatGPT*/
   display: inline-block;
-  /*Esto hace que el gradiente se vea igual no importa tamaño*/
   background: linear-gradient(
-    /*Estructura para personalizar mejor el gradient*/ 130deg,
+    130deg,
     var(--main-color) 0%,
     var(--text-color) 60%,
     var(--text-color) 100%
   );
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* ── NAVBAR ── */
 .navbar {
   position: fixed;
   top: 0;
   width: 80%;
   max-width: 1000px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 20px 40px;
   background-color: var(--background-color);
+  z-index: 100;
 }
 
 .navbar nav a {
@@ -125,6 +122,7 @@ textarea:focus {
   font-size: 40px;
 }
 
+/* ── LAYOUT ── */
 .panel-pattern {
   min-height: 100vh;
   display: flex;
@@ -148,7 +146,6 @@ textarea:focus {
       transparent 3px,
       transparent 50px
     );
-  /*ChatGPT*/
 }
 
 .blank-space {
@@ -177,11 +174,11 @@ textarea:focus {
   object-fit: cover;
 }
 
+/* ── CARDS ── */
 .card-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-
   max-width: 1000px;
   margin-top: 40px;
 }
@@ -216,6 +213,7 @@ textarea:focus {
   max-width: 200px;
 }
 
+/* ── CONTACT ── */
 .contact-section {
   width: 100%;
   max-width: 700px;
@@ -249,4 +247,159 @@ textarea:focus {
   background-color: var(--text-color);
   color: var(--background-color);
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 20px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: auto;
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar nav {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 99;
+  }
+
+  .navbar nav.open {
+    display: flex;
+  }
+
+  .navbar nav a {
+    margin: 0;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    max-width: 90%;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  .blank-space {
+    margin: 10%;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+    margin-top: 80px;
+  }
+
+  .card-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 90%;
+    margin-top: 24px;
+  }
+
+  .wide {
+    grid-column: span 1;
+  }
+
+  .contact-section {
+    width: 90%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .navbar {
+    width: 90%;
+    padding: 18px 30px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .card-section {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+
+  .wide {
+    grid-column: span 2;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
 }
