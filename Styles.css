@@ -1,123 +1,128 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --main-color: rgb(98, 190, 62);
-    --background-color: rgb(30, 30, 30);
-    --grid-color: rgba(255, 255, 255, 0.03);
-    --text-color: rgb(225, 225, 225);
-    --hover-color: rgb(41, 112, 67);
+  --main-color: rgb(98, 190, 62);
+  --background-color: rgb(30, 30, 30);
+  --grid-color: rgba(255, 255, 255, 0.03);
+  --text-color: rgb(225, 225, 225);
+  --hover-color: rgb(41, 112, 67);
 }
 
 body.light {
-    --background-color: rgb(225, 225, 225);
-    --text-color: rgb(30, 30, 30);
-    --grid-color: rgba(128, 128, 128, 0.03);
+  --background-color: rgb(225, 225, 225);
+  --text-color: rgb(30, 30, 30);
+  --grid-color: rgba(128, 128, 128, 0.03);
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 button {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    height: 30px;
-    border-width: 0px;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 30px;
+  border-width: 0px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 button:hover {
-    color: rgb(225, 225, 225); /*CONTRASTE! no lo borre */
-    background-color: var(--hover-color);
+  color: rgb(225, 225, 225);
+  /*CONTRASTE! no lo borre */
+  background-color: var(--hover-color);
 }
 
 button:active {
-    background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
-h1 { 
-    color: var(--text-color);
-    font-size: 48px;
-    margin: 10px 0px;
+h1 {
+  color: var(--text-color);
+  font-size: 48px;
+  margin: 10px 0px;
 }
 
 h2 {
-    color: var(--text-color);
-    margin: 10px 0 20px;
+  color: var(--text-color);
+  margin: 10px 0 20px;
 }
 
 p {
-    color: var(--text-color);
-    max-width: 600px;
-    line-height: 1.6;
+  color: var(--text-color);
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 section {
-    scroll-margin-top: 200px;
+  scroll-margin-top: 200px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--text-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: 14px;
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 14px;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--main-color);
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
 }
 
-.pretty-text { /*ChatGPT*/
-    display: inline-block; /*Esto hace que el gradiente se vea igual no importa tamaño*/
-    background: linear-gradient( /*Estructura para personalizar mejor el gradient*/
-        130deg,
-        var(--main-color) 0%,
-        var(--text-color) 60%,
-        var(--text-color) 100%
-    ); 
+.pretty-text {
+  /*ChatGPT*/
+  display: inline-block;
+  /*Esto hace que el gradiente se vea igual no importa tamaño*/
+  background: linear-gradient(
+    /*Estructura para personalizar mejor el gradient*/ 130deg,
+    var(--main-color) 0%,
+    var(--text-color) 60%,
+    var(--text-color) 100%
+  );
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 80%;
-    max-width: 1000px;  
+  position: fixed;
+  top: 0;
+  width: 80%;
+  max-width: 1000px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 20px 40px;
-    background-color: var(--background-color);
+  padding: 20px 40px;
+  background-color: var(--background-color);
 }
 
 .navbar nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .navbar nav a:hover {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 40px;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .panel-pattern {
@@ -142,11 +147,12 @@ input:focus, textarea:focus {
       var(--grid-color) 1px,
       transparent 3px,
       transparent 50px
-    );/*ChatGPT*/
+    );
+  /*ChatGPT*/
 }
 
 .blank-space {
-    margin: 20%;
+  margin: 20%;
 }
 
 .profile-img {
@@ -162,7 +168,7 @@ input:focus, textarea:focus {
 }
 
 .profile-img:hover {
-    border-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .profile-img img {
@@ -172,75 +178,75 @@ input:focus, textarea:focus {
 }
 
 .card-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 
-    max-width: 1000px;
-    margin-top: 40px;
+  max-width: 1000px;
+  margin-top: 40px;
 }
 
 .card {
-    background-color: var(--background-color);
-    padding: 25px;
-    border-radius: 12px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--text-color);
-    text-align: left;
+  background-color: var(--background-color);
+  padding: 25px;
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--text-color);
+  text-align: left;
 }
 
 .card:hover {
-    border-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .wide {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .image-card {
-    background-color: rgb(225, 225, 225);;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-card img {
-    width: 100%;
-    max-width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
 
 .contact-section {
-    width: 100%;
-    max-width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .contact-form {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .contact-form input,
 .contact-form textarea {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .contact-form textarea {
-    height: 160px;
-    resize: none;
+  height: 160px;
+  resize: none;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: var(--hover-color)
+  color: var(--hover-color);
 }
 
 .contact-btn {
-    margin-top: 10px;
-    height: 45px;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-weight: 600;
+  margin-top: 10px;
+  height: 45px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-weight: 600;
 }
