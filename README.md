@@ -72,4 +72,4 @@ Info extra: Se valora residencia en Estados Unidos y experiencia específica en 
 
 
 
-//TODO figma, git pages, html, css
+//TODO , git pages, , 

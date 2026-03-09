@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --main-color: rgb(180, 79, 247);
     --background-color: rgb(30, 30, 30);
@@ -82,6 +86,36 @@ input:focus, textarea:focus {
     -webkit-text-fill-color: transparent;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    max-width: 1000px;  
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    background-color: var(--background-color);
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: var(--main-color);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 40px;
+}
+
 .panel-pattern {
   min-height: 100vh;
   display: flex;
@@ -89,7 +123,6 @@ input:focus, textarea:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
 
   background-image:
     repeating-linear-gradient(
@@ -117,6 +150,7 @@ input:focus, textarea:focus {
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
+  margin-top: 100px;
   margin-bottom: 20px;
   border-width: 4px;
   border-style: solid;
@@ -178,6 +212,7 @@ input:focus, textarea:focus {
 }
 
 .contact-form {
+    align-content: center;
     display: flex;
     flex-direction: column;
     text-align: left;
