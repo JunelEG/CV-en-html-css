@@ -3,11 +3,11 @@ html {
 }
 
 :root {
-    --main-color: rgb(180, 79, 247);
+    --main-color: rgb(98, 190, 62);
     --background-color: rgb(30, 30, 30);
     --grid-color: rgba(255, 255, 255, 0.03);
     --text-color: rgb(225, 225, 225);
-    --hover-color: rgb(116, 54, 151);
+    --hover-color: rgb(41, 112, 67);
 }
 
 body.light {
@@ -234,7 +234,7 @@ input:focus, textarea:focus {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(109, 90, 131);
+    color: var(--hover-color)
 }
 
 .contact-btn {
