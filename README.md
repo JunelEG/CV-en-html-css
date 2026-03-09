@@ -1,8 +1,8 @@
 # CV-en-html-css
 Practica para mejorar en el manejo de la estructura de una pagina web (html) y su estilo (css), además de la posible implementación de funciones básicas con javaScript
 
-[Figma](https://www.figma.com/proto/elALjs9YzPFAEyUXmIt7VR/Designer-Developer-Portfolio--Community-?node-id=0-1&t=aMdXkp1LTkPIcYbv-1)
-Git Pages: //TODO link
+Figma: [Click Aquí](https://www.figma.com/proto/elALjs9YzPFAEyUXmIt7VR/Designer-Developer-Portfolio--Community-?node-id=0-1&t=aMdXkp1LTkPIcYbv-1)
+Git Pages: [Click Aquí](https://juneleg.github.io/CV-en-html-css/#contacto)
 
 Resumen de cada propuesta de trabajo (Resumen de ChatGPT):
 
@@ -69,7 +69,3 @@ Cualidades: Se requiere capacidad avanzada de debugging, atención al detalle, r
 Habilidades duras: Dominio de C# y Unity, experiencia comprobada en desarrollo y solución de problemas en aplicaciones VR para dispositivos Pico y Oculus, optimización de rendimiento, análisis y refactorización de código complejo, despliegue multiplataforma y pruebas en hardware VR.
 
 Info extra: Se valora residencia en Estados Unidos y experiencia específica en integración con hardware de realidad virtual.
-
-
-
-//TODO , git pages, , 
